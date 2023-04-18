@@ -1,9 +1,9 @@
 const Contact = () => {
   return (
-    <div className="w-3/4 mx-auto">
-      <h1 className="font-semibold text-6xl text-center mt-10">Get in touch</h1>
-      <form className="px-10 py-6 w-[50%]">
-        <label className="font-semibold text-slate-600" for="email">
+    <div id="contact" className="w-4/5 mx-auto ">
+      <h1 className="text-4xl mt-10 font-semibold">Get in touch</h1>
+      <form className="w-full">
+        <label className=" text-slate-600" for="email">
           Email:
         </label>
         <input
@@ -12,7 +12,7 @@ const Contact = () => {
           class="my-2 placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
           placeholder="Email"
         />
-        <label className="font-semibold text-slate-600" for="name">
+        <label className=" text-slate-600" for="name">
           Name:
         </label>
         <input

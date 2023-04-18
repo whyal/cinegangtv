@@ -2,15 +2,16 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 const Testimonies = () => {
   return (
-    <div className="w-3/4 mx-auto mt-48">
-      <h1 className="font-semibold text-7xl">Our Partners</h1>
+    <div id="clients" className="w-4/5 mx-auto mt-48">
+      <h1 className="font-semibold text-4xl text-[#7149C6]">Our Clients</h1>
       <Marquee
-        className="py-48 overflow-hidden"
+        className="py-6 overflow-hidden"
         pauseOnHover={true}
-        speed={100}
+        speed={40}
+        gradient={false}
       >
         <div className="flex items-center mr-96">
-          <div className="w-[300px]">
+          <div className="w-[100px]">
             <Image
               src="/images/klook.png"
               width={300}
@@ -18,7 +19,7 @@ const Testimonies = () => {
               alt="Klook's Logo"
             />
           </div>
-          <div className="flex flex-wrap w-96 ml-24 italic text-lg">
+          <div className="flex flex-wrap w-96 ml-24 italic">
             <q>
               From start to finish, the team at CinegangTV demonstrated a high
               level of professionalism and creativity. The production process
@@ -33,7 +34,7 @@ const Testimonies = () => {
         </div>
 
         <div className="flex items-center mr-96">
-          <div className="w-[300px]">
+          <div className="w-[100px]">
             <Image
               src="/images/tsl.png"
               width={300}

@@ -1,5 +1,5 @@
 const Layout = ({ children }) => {
-  return <main className="w-[90%] mx-auto">{children}</main>;
+  return <main className="w-full overflow-hidden">{children}</main>;
 };
 
 export default Layout;
