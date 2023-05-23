@@ -1,59 +1,32 @@
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import nextIcon from "../../public/icons/arrow-right-solid.svg";
+import prevIcon from "../../public/icons/arrow-left-solid.svg";
+import Carousel from "nuka-carousel";
+
+const props = {
+  defaultControlsConfig: {
+    nextButtonClassName: "nextNav",
+    prevButtonClassName: "prevNav",
+    nextButtonText: <Image src={nextIcon} height={30} width={30} />,
+    prevButtonText: <Image src={prevIcon} height={30} width={30} />,
+  },
+};
+
 const Testimonies = () => {
   return (
-    <div id="clients" className="w-4/5 mx-auto mt-48">
-      <h1 className="font-semibold text-4xl text-[#7149C6]">Our Clients</h1>
-      <Marquee
-        className="py-6 overflow-hidden"
-        pauseOnHover={true}
-        speed={40}
-        gradient={false}
-      >
-        <div className="flex items-center mr-96">
-          <div className="w-[100px]">
-            <Image
-              src="/images/klook.png"
-              width={300}
-              height={300}
-              alt="Klook's Logo"
-            />
-          </div>
-          <div className="flex flex-wrap w-96 ml-24 italic">
-            <q>
-              From start to finish, the team at CinegangTV demonstrated a high
-              level of professionalism and creativity. The production process
-              was seamless, and the final video exceeded John's expectations.
-              The attention to detail, innovative concepts, and flawless
-              execution truly set CinegangTV apart from the competition. John
-              highly recommends CinegangTV for their exceptional video
-              production services and looks forward to working with them again
-              in the future.
-            </q>
-          </div>
+    <div id="clients" className="my-72">
+      <h1 className="font-semibold text-4xl text-[#7149C6]">Testimonies</h1>
+      <Carousel {...props}>
+        <div className="h-[800px] bg-sky-400">
+          <h1>Client #1</h1>
         </div>
-
-        <div className="flex items-center mr-96">
-          <div className="w-[100px]">
-            <Image
-              src="/images/tsl.png"
-              width={300}
-              height={300}
-              alt="TheSmartLocal's Logo"
-            />
-          </div>
-          <div className="flex flex-wrap w-96 ml-24 italic text-lg">
-            <q>
-              As a small business, TheSmartLocal was looking to create a
-              promotional video for our company's website. CinegangTV exceeded
-              our expectations in every way. From the initial consultation to
-              the final product, we were impressed with the professionalism,
-              creativity, and attention to detail demonstrated by the team at
-              CinegangTV.
-            </q>
-          </div>
+        <div className="h-[800px] bg-red-400">
+          <h1>Client #2</h1>
         </div>
-      </Marquee>
+        <div className="h-[800px] bg-green-400">
+          <h1>Client #3</h1>
+        </div>
+      </Carousel>
     </div>
   );
 };

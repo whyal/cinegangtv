@@ -1,7 +1,9 @@
+import { Helmet } from "react-helmet";
+
 const Contact = () => {
   return (
-    <div id="contact" className="w-4/5 mx-auto ">
-      <h1 className="text-4xl mt-10 font-semibold">Get in touch</h1>
+    <div id="contact">
+      {/* <h1 className="text-4xl mt-10 font-semibold">Get in touch</h1>
       <form className="w-full">
         <label className=" text-slate-600" for="email">
           Email:
@@ -24,7 +26,11 @@ const Contact = () => {
         <button class="rounded-full bg-orange-500 px-4 py-2 my-2 text-white">
           Submit
         </button>
-      </form>
+      </form> */}
+      <div class="powr-form-builder" id="57ac62d2_1683894616"></div>
+      <Helmet>
+        <script src="https://www.powr.io/powr.js?platform=react"></script>
+      </Helmet>
     </div>
   );
 };

@@ -35,12 +35,12 @@ const Navbar = () => {
         </div>
         <div className="text-2xl md:relative">
           <Link className="nav-hover" scroll={false} href="#clients">
-            Clients
+            Current Works
           </Link>
         </div>
         <div className="text-2xl md:relative">
           <Link className="nav-hover" scroll={false} href="#contact">
-            Contact Us
+            Clients
           </Link>
         </div>
       </div>

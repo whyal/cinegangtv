@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Talent = ({ name, title }) => {
   return (
-    <div className="group flex flex-col items-center w-1/2">
+    <div className="group flex flex-col items-center w-1/2 sm:w-1/3 lg:w-64">
       <div className="flex justify-center items-center px-1">
         <div className="rounded-full w-full flex aspect-square mx-1.5 justify-center items-center overflow-hidden">
           <Image
@@ -16,7 +16,7 @@ const Talent = ({ name, title }) => {
           {name}
         </div>
       </div>
-      <p className="mt-2 font-semibold text-xl">{title}</p>
+      <p className="my-2 font-semibold text-center text-xl">{title}</p>
     </div>
   );
 };

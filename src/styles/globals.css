@@ -6,6 +6,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.slider-container .nextNav,
+.slider-container .prevNav {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @layer components {
     .nav-hover {
       @apply after:content-[''] after:h-[3px] after:bottom-0 after:left-0 after:bg-[#FFDEB9] after:transition-all after:duration-200 after:w-full after:opacity-0 after:absolute hover:after:opacity-100;
