@@ -3,21 +3,97 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 .slider-container .nextNav,
 .slider-container .prevNav {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+#seanShrimp,
+#tricycle {
+	animation: upanddown 5s ease-in alternate infinite;
+}
+
+#camera,
+#trumpo,
+#barrelMan {
+	animation: diagonal 3s ease-in alternate infinite;
+}
+
+#sdCard,
+#coconut {
+	animation: downandup 3s ease-in alternate infinite;
+}
+
+#sungka {
+	animation: shake 3s linear alternate infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+
+#studioLight {
+	animation: spin 7s ease-in alternate infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+
+.brand {
+	text-shadow: -4px 6px #8c4634;
+}
+
+@keyframes upanddown {
+	from {
+		transform: translateY(50px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes downandup {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(50px);
+	}
+}
+
+@keyframes diagonal {
+	from {
+		transform: translate(0);
+	}
+	to {
+		transform: translate(20px, -20px);
+	}
+}
+
+@keyframes shake {
+	from {
+		transform: translateY(0%) rotateZ(0deg);
+	}
+	to {
+		transform: translateY(20%) rotateZ(10deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
 @layer components {
-    .nav-hover {
-      @apply after:content-[''] after:h-[3px] after:bottom-0 after:left-0 after:bg-[#FFDEB9] after:transition-all after:duration-200 after:w-full after:opacity-0 after:absolute hover:after:opacity-100;
-    }
-  }
+	.nav-hover {
+		@apply after:content-[''] after:h-[3px] after:bottom-0 after:left-0 after:bg-[#FFDEB9] after:transition-all after:duration-200 after:w-full after:opacity-0 after:absolute hover:after:opacity-100;
+	}
+}
